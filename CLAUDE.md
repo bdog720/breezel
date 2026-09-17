@@ -69,6 +69,15 @@ Tests are Vitest + jsdom + Testing Library, colocated as `*.test.ts(x)`.
 - Imported headline/subheadline HTML is untrusted — it must go through `sanitize.ts`.
 - Layout presets live in `src/lib/layout-presets.ts`, shared with the editor's Position Presets panel (which applies only the device part).
 
+## Internal docs
+
+`internal-docs/` is gitignored. Put short-term internal Markdown and artifact files there: plans, specs, research notes, audits and handoff notes for work that spans several chat sessions.
+
+- Write new plans, specs and research here, including files a skill would otherwise put in `docs/` (for example superpowers plans and specs). The existing `docs/superpowers/` files stay where they are.
+- Start each file with its date and status, so a later session can tell whether it is still current.
+- These files exist only on this machine. Anything that must ship with the repo (user docs, generated agent-import docs) still belongs in `docs/`.
+- Check `internal-docs/` at the start of a session when the task continues earlier work.
+
 ## Constraints & gotchas
 
 - ⚠️ The app was called AppShots before it became Breezel. Keep reading the legacy names: `APPSHOTS_*` env vars (`server/config.ts`), `appshots-project` backups (`project-io.ts`), `appshots.json` / `appshots-import` manifests (`bundle.ts`, `schema.ts`), and the `appshots-*` localStorage keys (`migrate.ts`, `onboarding.ts`), which stay unrenamed on purpose.

@@ -10,3 +10,6 @@ count.txt
 .wrangler
 .appshots-data
 .breezel-data
+
+# Short-term internal notes that span sessions (see CLAUDE.md)
+internal-docs/
